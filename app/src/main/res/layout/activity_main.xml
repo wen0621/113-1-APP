@@ -373,6 +373,80 @@
                 android:entries="@array/num"
                 android:textAlignment="textEnd" />
 
+            
+
+        </LinearLayout>
+        <!-- 多區間統計 (一次顯示 當日/三日/七日) -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="新增"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/buttonDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="清除"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/buttonShow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="顯示"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonMulti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="1/3/7日 區間統計"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText" />
+
+        <!-- 自訂資料庫輸入日期 -->
+        <LinearLayout
+            android:id="@+id/linearLayout_custom_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <EditText
+                android:id="@+id/editTextCustomDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="輸入測試日期(yyyy-MM-dd)"
+                android:inputType="date"
+                android:layout_marginEnd="8dp"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/buttonCustomDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="手動測試日期"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
 
     </LinearLayout>

@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">菜單</string>
     <string-array name="num">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
+        <item>0份</item>
+        <item>1份</item>
+        <item>2份</item>
+        <item>3份</item>
+        <item>4份</item>
+        <item>5份</item>
     </string-array>
 </resources>
