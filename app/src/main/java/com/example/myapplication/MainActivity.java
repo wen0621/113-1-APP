@@ -78,16 +78,17 @@ public class MainActivity extends AppCompatActivity {
         String dateInput = editTextCustomDate.getText().toString().trim();
         if (dateInput.isEmpty()) {
             Toast.makeText(this, "請輸入日期 (yyyy-MM-dd)", Toast.LENGTH_SHORT).show();
-            return null;
+            return "null";
         }
         if (!dateInput.matches("\\d{4}-\\d{2}-\\d{2}")) {
             Toast.makeText(this, "日期格式需為 yyyy-MM-dd，例如 2025-01-05", Toast.LENGTH_SHORT).show();
-            return null;
+            return "null";
         }
         return dateInput;
     }
 
     private void handleMenuItemAddition(String customDate) {
+        if (customDate == "null") return;
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         int totalQuantity = 0;
 
@@ -121,8 +122,6 @@ public class MainActivity extends AppCompatActivity {
 
     private String getCurrentDate() {
         String[] dateFormats = {
-                "yyyy-M-dd", // 例如 2025-1-06
-                "yyyy-MM-d", // 例如 2025-01-6
                 "yyyy-MM-dd" // 標準格式 例如 2025-01-06
         };
 
